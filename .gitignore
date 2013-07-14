@@ -1,6 +1,8 @@
 *.swp
 .idea
 .settings
+.project
+.buildpath
 blog
 commands.php
 command-*.php

@@ -49,16 +49,6 @@
                         'title' => 'Development blog.',
                         'href'	=> '/blog/'
                     ),
-                        
-                    'Mailing List' => array(
-                        'title' => 'Mailing List',
-                        'href'	=> 'https://groups.google.com/group/gibson-cache-server'	
-                    ),
-
-                    'Issues' => array(
-                        'title' => 'Gibson issue manager.',
-                        'href'	=> 'https://github.com/evilsocket/gibson/issues'
-                    ),		
 
                     'Server Status' => array(
                             'title' => 'Gibson status on this server.',
@@ -79,6 +69,15 @@
                 </li>
                 <?php endforeach; ?>
             </ul>
+
+            <div id="right-nav">
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=evilsocket&repo=gibson&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>  
+
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gibson-db.in/" data-text="Gibson Cache Server" data-via="evilsocket" data-lang="it" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            
+ 
+            </div>
         </div>
 
 <div class="container">

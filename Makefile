@@ -4,15 +4,15 @@ all:
 
 install:
 	rsync -rtvz \
-    	--exclude '*.swp' \
-    	--exclude '_build' \
-    	--exclude 'blog' \
-    	--exclude '.idea' \
-    	--exclude '.settings' \
-		--exclude '.git' \
-		--exclude '.gitignore' \
-    	--exclude 'Makefile' \
-    	. evilsocket@gibson-db.in:/var/www/gibson-db.in/www/
+--exclude '*.swp' \
+--exclude '_build' \
+--exclude 'blog' \
+--exclude '.idea' \
+--exclude '.settings' \
+--exclude '.git' \
+--exclude '.gitignore' \
+--exclude 'Makefile' \
+. evilsocket@gibson-db.in:/var/www/gibson-db.in/www/
 
 clean:
 	rm commands.php command-*.php sitemap.xml

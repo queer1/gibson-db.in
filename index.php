@@ -25,6 +25,7 @@ achieving the same performance grades.</p>
 </ul>
 </p>
 
+<p>Join our <a href="https://groups.google.com/group/gibson-cache-server">mailing list</a> or take a look at the <a href="https://github.com/evilsocket/gibson/issues">issues panel</a> to stay in touch with us.</p>
 <br/>
 
 <p>

@@ -1,0 +1,7 @@
+*.swp
+.idea
+.settings
+blog
+commands.php
+command-*.php
+sitemap.xml

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://gibson-db.in/sitemap.xml

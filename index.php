@@ -1,0 +1,62 @@
+<?php include_once 'inc/header.php'; ?>
+
+<article id="topic">
+
+    <div style="margin-top: 10px; float:left; width:70%;">
+
+<img src="/media/logo-105.png" title="Gibson" style="float:left; margin-left: -13px; margin-top: -17px;"/>
+<h3 style="line-height: 100%;margin-top: -6px;">Gibson is a high efficiency, tree based memory cache server. It is not meant to replace a database, since it was written to be a key-value store
+to be used as a cache server, but it's not the usual cache server.</h3>
+<p>Normal key-value stores ( memcache, redis, etc ) uses a <a href="http://en.wikipedia.org/wiki/Hash_table">hash table</a> as their main data structure, so
+every key is hashed with a specific algorithm and the resulting hash is used to identify the given value in memory. This approach, although very fast, doesn't
+allow the user to execute globbing expressions/selections on a given (multiple) keyset, thus resulting on a pure one-by-one access paradigm.</p>
+<p>Gibson is different, it uses a <a href="/trie-data-structure.php">special tree based structure</a> allowing the user to perform operations on <a href="/phpgibson.php#mset">multiple key sets</a> using a prefix expression
+achieving the same performance grades.</p>
+
+<h3>Features</h3>
+<p>
+<ul>
+    <li><a href="http://gibson-db.in/blog/a-matter-of-speed-redis-vs-gibson-set-benchmark.html" title="Benchmark" target="_blank"><strong>Very fast</strong></a> and with the lowest memory footprint possible.</li>
+    <li>Unlike many other stores, inserts, deletions and retrievals have the <strong>same time complexity</strong>.</li>
+    <li>Fast LZF object <strong>compression</strong>.</li>
+    <li>Builtin object Time-To-Live.</li>
+    <li>Cached object <strong>locking</strong> and <strong>unlocking</strong>.</li>
+    <li>Multiple key set operation with M* operators.</li>
+</ul>
+</p>
+
+<br/>
+
+<p>
+	<a href="/documentation.php">Learn more →</a>
+</p>
+
+</div>
+
+<aside style="float:right; width:25%;margin-top: -20px;border-left:  1px solid #eeeeee;padding-left: 20px; font-size: 12px; line-height: 12px;">
+<h3>News <a href="/blog/feed"><img src="/media/rss-icon.png"/></a></h3>
+
+<ul class="unstyled">
+<?php 
+
+$gb = new Gibson();
+$gb->pconnect('/var/run/gibson.sock');
+if( ( $feed = $gb->get('gbin_1h_feed') ) === FALSE ){
+    $feed = file_get_contents("http://gibson-db.in/blog/feed");
+    $gb->set( 'gbin_1h_feed', igbinary_serialize( $feed ), 3600 );
+}
+else
+    $feed = igbinary_unserialize($feed);
+
+$xml = new SimpleXmlElement($feed);
+foreach ($xml->channel->item as $item)
+{    
+    echo '<li><a href="'.htmlentities($item->link).'" title="'.htmlentities($item->title).'">'.htmlentities($item->title).'</a></li>';
+}
+?>
+</ul>
+</aside>
+
+</article>
+
+<?php include_once 'inc/footer.php'; ?>

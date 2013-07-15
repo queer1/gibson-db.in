@@ -181,8 +181,9 @@
         ],
         "example": [
             "SET 0 foo bar",
-            "LOCK foo 30",
-            "DEL foo // this will fail since foo is now locked"
+            "SET 0 fuu bur",
+            "MLOCK f 30",
+            "DEL foo // this will fail since both foo and fuu are now locked"
         ],
         "notes": [
             

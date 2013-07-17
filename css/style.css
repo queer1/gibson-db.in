@@ -1,10 +1,9 @@
 body {
-    background-color: #fafafa !important;
+    background: #f1f1f1 url(https://gemnasium.com/assets/bg-f3513e3946d9743b64817c9f50ab66ee.jpg) !important;
     color: #333333;
     padding: 0 0 10px 0 !important;
     margin: 0;
-    font-size: 13px;
-    line-height: 100%;
+    font: 14px/1.3em 'Source Sans Pro', sans-serif;
 }
 
 h1 {
@@ -17,6 +16,17 @@ h2 {
 
 h3 {
     font-size: 15px;
+}
+
+a {
+    color: #515864;
+    font-weight: 700;
+}
+
+code, pre {
+    background-color: #333;
+    color: whitesmoke;
+    line-height: 100%;
 }
 
 body > footer {
@@ -34,14 +44,15 @@ body > footer {
 }
 
 .wrapper {
-    -webkit-box-shadow: #cccccc, 0px, 0px, 10px;
-    -moz-box-shadow: #cccccc, 0px, 0px, 10px;
-    box-shadow: #cccccc, 0px, 0px, 10px;
     overflow: hidden;
-    color: #333333;
+    color: #515864;
     margin: 0 auto;
     width: 70%;
     padding: 30px;
+}
+
+table.table {
+    background-color: white;
 }
 
 table.packet tr td {
@@ -71,6 +82,8 @@ table.clients_table td:first-child + td + td {
 #navigation {
     padding:0;
     background-color:#333;
+    font-family: "Archivo Narrow",Helvetica,Arial,sans-serif;
+    font-size: 14px;
 }
 
 #navigation ul {
@@ -86,10 +99,23 @@ table.clients_table td:first-child + td + td {
     margin-right:10px;
 }
 
+#navigation ul li.active > a { 
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+
 #navigation ul a {
     padding:6px 12px;
     border-radius:3px;
-    color:#eee;
+    color: #999999;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    font-weight: normal;
+}
+
+#navigation ul a:hover {
+    text-decoration:none;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
 }
 
 #right-nav {

@@ -38,65 +38,71 @@ foreach( $commands as $cmd => $data ){
                  '    <pre>'.htmlentities($data->syntax).'</pre>'.PHP_EOL.
                  '  </p>'.PHP_EOL;          
 
-    $content  .= '  <p>'.PHP_EOL.
-                 '    <h4>Arguments</h4>'.PHP_EOL.
-                 '    <ul>'.PHP_EOL;
+    if( $data->args )
+    {
+        $content  .= '  <p>'.PHP_EOL.
+                     '    <h4>Arguments</h4>'.PHP_EOL.
+                     '    <ul>'.PHP_EOL;
 
-    foreach( $data->args as $arg ){
-        $content .= "      <li>".PHP_EOL.
-                    "          <strong>{$arg->name}</strong> <em>( {$arg->type} )</em> {$arg->desc}".PHP_EOL;
+        foreach( $data->args as $arg ){
+            $content .= "      <li>".PHP_EOL.
+                        "          <strong>{$arg->name}</strong> <em>( {$arg->type} )</em> {$arg->desc}".PHP_EOL;
+        
+            if( isset( $arg->enum ) ){
+                $content .= '<br/><em>Valid values:</em>'.PHP_EOL.
+                            '<ul>'.PHP_EOL;
+
+                foreach( $arg->enum as $value => $desc ){
+                    $content .= "<li><strong>$value</strong>: $desc</li>".PHP_EOL;
+                }
+
+                $content .= '</ul>'.PHP_EOL;
+            }
+
+            $content .= "      </li>".PHP_EOL;    
+
+        }
+
+        $content  .= '    </ul>'.PHP_EOL.
+                     '  </p>'.PHP_EOL;    
+    }
     
-        if( isset( $arg->enum ) ){
-            $content .= '<br/><em>Valid values:</em>'.PHP_EOL.
-                        '<ul>'.PHP_EOL;
+    if( $data->example )
+    {
+        $content  .= '   <p>'.PHP_EOL.
+                     '      <h4>Example</h4>'.PHP_EOL.
+                     '      <pre>'.PHP_EOL;
 
-            foreach( $arg->enum as $value => $desc ){
-                $content .= "<li><strong>$value</strong>: $desc</li>".PHP_EOL;
-            }
-
-            $content .= '</ul>'.PHP_EOL;
+        foreach( $data->example as $example ){
+            $content .= htmlentities($example)."\n";
         }
 
-        $content .= "      </li>".PHP_EOL;    
+        $content .= '</pre>'.PHP_EOL.
+                    '   </p>'.PHP_EOL;
 
-    }
+        $content  .= '   <p>'.PHP_EOL.
+                     '      <h4>Notes</h4>'.PHP_EOL.
+                     '      <ul>'.PHP_EOL;
 
-    $content  .= '    </ul>'.PHP_EOL.
-                 '  </p>'.PHP_EOL;    
+        foreach( $data->notes as $name => $note ){
+            if( is_scalar($note) ){
+                $content .= "<li>$note</li>".PHP_EOL;
+            }   
+            else {
+                $content .= "<li>$name".PHP_EOL.
+                            "<ul>".PHP_EOL;
 
-    $content  .= '   <p>'.PHP_EOL.
-                 '      <h4>Example</h4>'.PHP_EOL.
-                 '      <pre>'.PHP_EOL;
+                foreach( $note as $key => $value ){
+                   $content .= "<li><strong>$key</strong> $value</li>".PHP_EOL;
+                }
 
-    foreach( $data->example as $example ){
-        $content .= htmlentities($example)."\n";
-    }
-
-    $content .= '</pre>'.PHP_EOL.
-                '   </p>'.PHP_EOL;
-
-    $content  .= '   <p>'.PHP_EOL.
-                 '      <h4>Notes</h4>'.PHP_EOL.
-                 '      <ul>'.PHP_EOL;
-
-    foreach( $data->notes as $name => $note ){
-        if( is_scalar($note) ){
-            $content .= "<li>$note</li>".PHP_EOL;
-        }   
-        else {
-            $content .= "<li>$name".PHP_EOL.
-                        "<ul>".PHP_EOL;
-
-            foreach( $note as $key => $value ){
-               $content .= "<li><strong>$key</strong> $value</li>".PHP_EOL;
+                $content .= "</ul></li>".PHP_EOL;
             }
-
-            $content .= "</ul></li>".PHP_EOL;
         }
-    }
 
-    $content .= '       </ul>'.PHP_EOL.
-                '   </p>'.PHP_EOL;
+        $content .= '       </ul>'.PHP_EOL.
+                    '   </p>'.PHP_EOL;
+    }
 
     $content .= '</article>'.PHP_EOL.
                 '<?php include_once "inc/disqus.php"; ?>'.PHP_EOL.

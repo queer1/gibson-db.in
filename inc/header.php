@@ -20,7 +20,10 @@
 	<!-- Twitter Bootstrap -->
 	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900,400italic,700italic,900italic" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700italic,700" media="screen" rel="stylesheet" type="text/css" />
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<link rel="shortcut icon" href="/media/favicon.png" />
 

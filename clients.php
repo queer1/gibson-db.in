@@ -1,7 +1,10 @@
 <?php $__TITLE = "Clients"; include_once "inc/header.php"; ?>
 
 <article id="topic">
-
+<ul class="breadcrumb">
+    <li><a href="/documentation.php">Documentation</a> <span class="divider">/</span></li>
+    <li class="active">Clients</li>
+</ul>
 <h1>Clients</h1>
 
 <p>

@@ -1,6 +1,11 @@
 <?php $__TITLE = 'Using the PHP5 Client Extension'; include_once 'inc/header.php'; ?>
 
 <article>
+<ul class="breadcrumb">
+    <li><a href="/documentation.php">Documentation</a> <span class="divider">/</span></li>
+    <li><a href="/clients.php">Clients</a> <span class="divider">/</span></li>
+    <li class="active">phpgibson</li>
+</ul>
 <h1><a name="phpgibson" class="anchor" href="#phpgibson"><span class="octicon octicon-link"></span></a>Using the PHP5 Client Extension</h1>
 
 <p>The <strong>phpgibson</strong> extension provides an API for communicating with the Gibson cache server. It is released under the BSD License.</p>

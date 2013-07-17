@@ -6,7 +6,10 @@ $index_fn = realpath( __DIR__."/../" )."/commands.php";
 $index    = '<?php $__TITLE = "Commands"; include_once "inc/header.php"; ?>
 
 <article id="topic">
-
+<ul class="breadcrumb">
+    <li><a href="/documentation.php">Documentation</a> <span class="divider">/</span></li>
+    <li class="active">Command Reference</li>
+</ul>
 <h1>Command Reference</h1>
 <p>
     A list with each command follows.

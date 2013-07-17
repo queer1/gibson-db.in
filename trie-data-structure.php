@@ -1,6 +1,10 @@
 <?php $__TITLE = 'Trie Data Structure'; include_once 'inc/header.php'; ?>
 
 <article id="topic">
+<ul class="breadcrumb">
+    <li><a href="/documentation.php">Documentation</a> <span class="divider">/</span></li>
+    <li class="active">Data Structure</li>
+</ul>
     <h1>Gibson Data Structure, the Trie</h1>
 
     <p>

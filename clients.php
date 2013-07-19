@@ -41,7 +41,7 @@ Available clients follows, if you want your client to be listed here, feel free 
       <a href="https://github.com/evilsocket/node-gibson">Repository</a>
   </td>
   <td>
-    <small>Still being developed.</small>
+    <a href="https://github.com/evilsocket/node-gibson/#readme">Documentation</a>
   </td>
   <td>
     A pure javascript, event oriented node.js client.

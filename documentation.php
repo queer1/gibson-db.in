@@ -9,7 +9,7 @@
     <li><a href="#configuration">Configuration</a></li>
     <li><a href="#cclient">Using the console client</a></li>
     <li><a href="/commands.php">Command Reference</a></li>
-    <li><a href="/clients.php">Other Clients</a></li>
+    <li><a href="/clients.php">Clients</a></li>
     <li><a href="/protocol.php">Protocol Specifications</a></li>
     <li><a href="/trie-data-structure.php">The Trie Data Structure</a></li>
     <li><a href="#scaling">Make Gibson scale</a>

@@ -6,6 +6,7 @@
 <p>
 <ul>
     <li><a href="#intro">Introduction</a></li>
+    <li><a href="/download.php">Compilation</a></li>
     <li><a href="#configuration">Configuration</a></li>
     <li><a href="#cclient">Using the console client</a></li>
     <li><a href="/commands.php">Command Reference</a></li>

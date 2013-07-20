@@ -1,16 +1,29 @@
 <?php $__TITLE = 'Download'; include_once 'inc/header.php'; ?>
 
 <article id="topic">
+<ul class="breadcrumb">
+    <li><a href="/documentation.php">Documentation</a> <span class="divider">/</span></li>
+    <li class="active">Compilation</li>
+</ul>
 
 <h1>Compilation and Installation</h1>
+<p>Gibson is still hosted as source code release on Github, in order to run it you will have to compile sources, therefore you will need <strong>git</strong>, <strong>cmake</strong>, <strong>gcc</strong> and <strong>build-essential</strong> packages installed on your computer.</p>
+<hr/>
 
+<h4>Clone/Download</h4>
 <p>
-Gibson source code release can be found <a href="https://github.com/evilsocket/gibson" title="Gibson source code">here</a>. In order to compile it, you will need cmake and autotools installed, then:
+You have two options to obtain the source code, one is cloning the github repository using git:
+
+<pre>git clone https://github.com/evilsocket/gibson.git</pre>
+
+Or you can download the source code archive <a href="https://github.com/evilsocket/gibson/archive/unstable.zip">from here</a>.
 </p>
 
+<h4>Compiling</h4>
 <p>
+Once you got the source code, all you have to do is compile Gibson, the process is pretty straightforward.
 <pre>
-$ cd /path/to/gibson-source/
+$ cd gibson
 $ cmake . [compilation options]
 $ make
 # make install
@@ -35,7 +48,7 @@ To use the <a href="/blog/gibson-is-now-optionally-jemalloc-powered.html">jemall
 <br/><br/>
 
 <p>
-If you want to edit its default configuration, please refer to the <a href="/documentation.php">documentation</a>.
+If you want to edit the default configuration, please refer to the <a href="/documentation.php">documentation</a>.
 </p>
 </article>
 <?php include_once 'inc/disqus.php'; ?>

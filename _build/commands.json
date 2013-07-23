@@ -349,7 +349,7 @@
             
         ],
         "example": [ "QUIT" ],
-        "notes": [ "" ]
+        "notes": [ ]
     },
     "DEL": {
         "syntax": "DEL <key>",
@@ -444,7 +444,7 @@
             "SET 0 fuu bur",
             "COUNT f // will return 2"
         ],
-        "notes": [ "" ]
+        "notes": [ ]
     },
     "KEYS": {
         "syntax": "KEYS <prefix>",
@@ -462,6 +462,6 @@
             "SET 0 fuu bur",
             "KEYS f // will return [foo,fuu]"
         ],
-        "notes": [ "" ]
+        "notes": []
     }
 }

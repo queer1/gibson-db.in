@@ -35,6 +35,11 @@ $ make
 Where <strong>compilation options</strong> might be:
 
 <br/>
+<pre>-DPREFIX=/your/custom/prefix</pre>
+
+To use a different installation prefix rather than <em>/usr</em> .
+
+<br/>
 <pre>-DWITH_DEBUG=1</pre>
 
 To compile with debug symbols and without optimizations ( for devs ).

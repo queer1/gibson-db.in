@@ -80,28 +80,30 @@ foreach( $commands as $cmd => $data ){
         $content .= '</pre>'.PHP_EOL.
                     '   </p>'.PHP_EOL;
 
-        $content  .= '   <p>'.PHP_EOL.
-                     '      <h4>Notes</h4>'.PHP_EOL.
-                     '      <ul>'.PHP_EOL;
+        if( $data->notes ){
+            $content  .= '   <p>'.PHP_EOL.
+                         '      <h4>Notes</h4>'.PHP_EOL.
+                         '      <ul>'.PHP_EOL;
 
-        foreach( $data->notes as $name => $note ){
-            if( is_scalar($note) ){
-                $content .= "<li>$note</li>".PHP_EOL;
-            }   
-            else {
-                $content .= "<li>$name".PHP_EOL.
-                            "<ul>".PHP_EOL;
+            foreach( $data->notes as $name => $note ){
+                if( is_scalar($note) ){
+                    $content .= "<li>$note</li>".PHP_EOL;
+                }   
+                else {
+                    $content .= "<li>$name".PHP_EOL.
+                                "<ul>".PHP_EOL;
 
-                foreach( $note as $key => $value ){
-                   $content .= "<li><strong>$key</strong> $value</li>".PHP_EOL;
+                    foreach( $note as $key => $value ){
+                       $content .= "<li><strong>$key</strong> $value</li>".PHP_EOL;
+                    }
+
+                    $content .= "</ul></li>".PHP_EOL;
                 }
-
-                $content .= "</ul></li>".PHP_EOL;
             }
-        }
 
-        $content .= '       </ul>'.PHP_EOL.
-                    '   </p>'.PHP_EOL;
+            $content .= '       </ul>'.PHP_EOL.
+                '   </p>'.PHP_EOL;
+        }
     }
 
     $content .= '</article>'.PHP_EOL.

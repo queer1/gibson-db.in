@@ -445,5 +445,23 @@
             "COUNT f // will return 2"
         ],
         "notes": [ "" ]
+    },
+    "KEYS": {
+        "syntax": "KEYS <prefix>",
+        "summary": "Return a list of keys matching the given prefix.",
+        "args": [
+            {
+                "name": "prefix",
+                "type": "string",
+                "desc": "The key prefix to use as expression."
+            }
+
+        ],
+        "example": [
+            "SET 0 foo bar",
+            "SET 0 fuu bur",
+            "KEYS f // will return [foo,fuu]"
+        ],
+        "notes": [ "" ]
     }
 }

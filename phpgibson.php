@@ -41,7 +41,6 @@
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
-<p>First of all make sure to have the <a href="https://github.com/evilsocket/libgibsonclient">Gibson client library</a> installed on your system, then:</p>
 
 <pre><code>phpize
 ./configure
@@ -121,7 +120,6 @@ export CFLAGS CXXFLAGS LDFLAGS CCFLAGS MACOSX_DEPLOYMENT_TARGET
 <li>
 <a href="#quit">quit</a> - Close the connection</li>
 </ol><h3>
-
 <a name="connect" class="anchor" href="#connect"><span class="octicon octicon-link"></span></a>connect</h3>
 
 <hr><p><em><strong>Description</strong></em>: Connects to a Gibson instance.</p>
@@ -226,9 +224,10 @@ $gibson-&gt;pconnect('/tmp/gibson.sock'); // unix domain socket.
 <li>
 <a href="#stats">stats</a> - Get system stats about the Gibson instance.</li>
 <li>
+<a href="#keys">keys</a> - Return a list of keys matching the given prefix.</li>
+<li>
 <a href="#ping">ping</a> - Ping the server instance to refresh client last seen timestamp.</li>
-</ol>
-<h3>
+</ol><h3>
 <a name="getlasterror" class="anchor" href="#getlasterror"><span class="octicon octicon-link"></span></a>getLastError</h3>
 
 <hr><p><em><strong>Description</strong></em>: If an error occurred, return its human readable description.</p>
@@ -760,24 +759,51 @@ echo $gibson-&gt;meta( 'foo', 'created' )."\n"; // will print the actual timesta
 </code></pre>
 
 <h3>
-<a name="ping" class="anchor" href="#ping"><span class="octicon octicon-link"></span></a>ping</h3>
+<a name="keys" class="anchor" href="#keys"><span class="octicon octicon-link"></span></a>keys</h3>
 
-<hr><p><em><strong>Description</strong></em>: Ping the server instance to refresh client last seen timestamp.</p>
+<hr><p><em><strong>Description</strong></em>: Return a list of keys matching the given prefix.</p>
 
 <h5>
 <a name="parameters-22" class="anchor" href="#parameters-22"><span class="octicon octicon-link"></span></a><em>Parameters</em>
 </h5>
 
-<p>None</p>
+<p><em>prefix</em> (string) The key prefix to use as expression.</p>
 
 <h5>
 <a name="return-value-22" class="anchor" href="#return-value-22"><span class="octicon octicon-link"></span></a><em>Return value</em>
 </h5>
 
-<p><em>BOOL</em> <code>TRUE</code> in case of success, <code>FALSE</code> in case of failure.</p>
+<p><em>Mixed</em> The list of matching keys, <code>FALSE</code> in case of failure.</p>
 
 <h5>
 <a name="example-23" class="anchor" href="#example-23"><span class="octicon octicon-link"></span></a><em>Example</em>
+</h5>
+
+<pre><code>$gibson-&gt;set( 'app:count:a', 1 );
+$gibson-&gt;set( 'app:count:b', 2 );
+
+$gibson-&gt;keys( 'app:count:' ); // Will return an array with both keys.
+</code></pre>
+
+<h3>
+<a name="ping" class="anchor" href="#ping"><span class="octicon octicon-link"></span></a>ping</h3>
+
+<hr><p><em><strong>Description</strong></em>: Ping the server instance to refresh client last seen timestamp.</p>
+
+<h5>
+<a name="parameters-23" class="anchor" href="#parameters-23"><span class="octicon octicon-link"></span></a><em>Parameters</em>
+</h5>
+
+<p>None</p>
+
+<h5>
+<a name="return-value-23" class="anchor" href="#return-value-23"><span class="octicon octicon-link"></span></a><em>Return value</em>
+</h5>
+
+<p><em>BOOL</em> <code>TRUE</code> in case of success, <code>FALSE</code> in case of failure.</p>
+
+<h5>
+<a name="example-24" class="anchor" href="#example-24"><span class="octicon octicon-link"></span></a><em>Example</em>
 </h5>
 
 <pre><code>$gibson-&gt;ping(); 

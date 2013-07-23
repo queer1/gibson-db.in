@@ -190,6 +190,12 @@
 			<td>0x14</td>
 			<td>KEY METANAME</td>
 			<td>foo encoding</td>
+        </tr>
+		<tr>
+			<td>OP_KEYS</td>
+			<td>0x15</td>
+			<td>PREFIX</td>
+			<td>f</td>
 		</tr>
 		<tr>
 			<td>OP_END</td>

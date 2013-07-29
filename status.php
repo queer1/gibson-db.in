@@ -49,7 +49,7 @@ else
 
 ?>
 <p>
-<table class="table">
+<table class="table" style="width: 100%;padding: 25px;">
 	<tr>
 		<td><strong>Status</strong></td>
 		<td>

@@ -166,6 +166,16 @@ Objects above this size will be compressed in memory.
 Number of milliseconds between each cron schedule, do not put a value higher than 1000.
 </p>
 
+<h3>max_mem_cron</h3>
+<p>
+Check if max memory usage is reached every 'max_mem_cron' seconds.
+</p>
+
+<h3>expired_cron</h3>
+<p>
+Check for expired items every 'expired_cron' seconds.
+</p>
+
 <hr id="cclient"/>
 <h4>Using the console client</h4>
 <p>

@@ -1,7 +1,7 @@
 <?php
 
-$commands = file_get_contents( __DIR__ . '/commands.json' );
-$commands = json_decode($commands);
+$commands = file_get_contents( 'https://raw.github.com/evilsocket/gibson/unstable/devel/commands.json' );
+$commands = json_decode($commands); 
 $index_fn = realpath( __DIR__."/../" )."/commands.php";
 $index    = '<?php $__TITLE = "Commands"; include_once "inc/header.php"; ?>
 
@@ -17,7 +17,7 @@ $index    = '<?php $__TITLE = "Commands"; include_once "inc/header.php"; ?>
 <hr/>
 <p>
 <ul>'.PHP_EOL;
-    
+
 foreach( $commands as $cmd => $data ){
     $filename = realpath( __DIR__."/../" )."/command-".strtolower($cmd).".php";
 

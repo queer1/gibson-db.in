@@ -115,6 +115,24 @@ Available clients follows, if you want your client to be listed here, feel free 
 </tr>
 </table>
 
+<hr/>
+<h4 id="Ruby">Ruby</h4>
+<table class="clients_table">
+<tr>
+  <td>
+    gibson
+  </td>
+  <td>
+    <a href="https://github.com/evilsocket/ruby-gibson">Repository</a>
+  </td>
+  <td>
+    <a href="https://github.com/evilsocket/ruby-gibson/#readme">Documentation</a>
+  </td>
+  <td>
+      High performance Gibson client for Ruby.
+  </td>
+</tr>
+</table>
 </article>
 
 <?php include_once "inc/footer.php"; ?>

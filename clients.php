@@ -31,6 +31,39 @@ Available clients follows, if you want your client to be listed here, feel free 
 </table>
 
 <hr/>
+<h4 id="Java">Java</h4>
+<table class="clients_table">
+<tr>
+  <td>
+    Jibson
+  </td>
+  <td>
+    <a href="https://github.com/bak1an/jibson">Repository</a>
+  </td>
+  <td>
+    <small>Still being developed.</small>
+  </td>
+  <td>
+      A Java client module from Anton Baklanov.
+  </td>
+</tr>
+<tr>
+  <td>
+    pyGibson 
+  </td>
+  <td>
+      <a href="https://github.com/AleshGood/pyGibson">Repository</a>
+  </td>
+  <td>
+    <small>Still being developed.</small>
+  </td>
+  <td>
+      Another Python client module from Alesh Good.
+  </td>
+</tr>
+</table>
+
+<hr/>
 <h4 id="Nodejs">Node.js</h4>
 <table class="clients_table">
 <tr>
@@ -90,10 +123,10 @@ Available clients follows, if you want your client to be listed here, feel free 
     pygibson
   </td>
   <td>
-    <a href="https://github.com/bak1an/pygibson">Repository</a>
+    <a href="https://pypi.python.org/pypi/pygibson/">Repository</a>
   </td>
   <td>
-    <small>Still being developed.</small>
+    <a href="https://pypi.python.org/pypi/pygibson/">Documentation</a>
   </td>
   <td>
       A Python client module from Anton Baklanov.

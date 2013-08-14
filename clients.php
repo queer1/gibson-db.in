@@ -47,20 +47,6 @@ Available clients follows, if you want your client to be listed here, feel free 
       A Java client module from Anton Baklanov.
   </td>
 </tr>
-<tr>
-  <td>
-    pyGibson 
-  </td>
-  <td>
-      <a href="https://github.com/AleshGood/pyGibson">Repository</a>
-  </td>
-  <td>
-    <small>Still being developed.</small>
-  </td>
-  <td>
-      Another Python client module from Alesh Good.
-  </td>
-</tr>
 </table>
 
 <hr/>

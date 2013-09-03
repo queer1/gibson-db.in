@@ -1,0 +1,7 @@
+title: Gibson Cache Server
+name: Gibson - A high efficiency, tree based memory cache server.
+markdown: redcarpet
+pygments: false
+paginate: 10
+permalink: /blog/:title.html
+paginate_path: "blog/page:num"

@@ -1,9 +1,6 @@
+_site
 *.swp
 .idea
 .settings
 .project
 .buildpath
-blog
-commands.php
-command-*.php
-sitemap.xml

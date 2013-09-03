@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title ? "Gibson - " + page.title : "Gibson Cache Server" }}</title>
+  
+  <meta charset="utf-8"/>
+  <meta name="language" content="en"/>
+  <meta name="title" content="Gibson - A high efficiency, tree based memory cache server."/>
+  <meta name="description" content="Gibson is a high efficiency, tree based memory cache server which will boost up your web application performances."/>
+  <meta name="keywords" content="gibson, cache, memory, memory cache, server, cache server, gibson server, performance, optimization, tree, btree, nosql"/>
+  <meta name="google-site-verification" content="uqqmUCQISZ2oloAGH45pQIVn5eia7nf6vmRY3RJGbF4" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="http://gibson-db.in/media/logo-105.png"/>
+  
+  <!-- Twitter Bootstrap -->
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900,400italic,700italic,900italic" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700italic,700" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/media/favicon.png" />
+
+</head>
+<body>
+<div id="navigation">
+  <ul>
+    <li>
+      <a href="/" title="Gibson home.">Home</a>
+    </li>
+    <li>
+      <a href="/documentation.html" title="Gibson documentation.">Documentation</a>
+    </li>
+    <li>
+      <a href="/download.html" title="Download Gibson source code and binary release.">Download</a>
+    </li>
+    <li>
+      <a href="/blog/" title="Development blog.">Blog</a>
+    </li>
+  </ul>
+  <div id="right-nav">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=evilsocket&repo=gibson&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>  
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gibson-db.in/" data-text="Gibson Cache Server" data-via="evilsocket" data-lang="it" data-dnt="true">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+</div>
+
+<div class="container">
+  <div class="wrapper">
+    <article id="topic">
+
+      {{ content }}
+
+    </article>
+  </div>
+</div> 
+
+<footer id="footer">
+    <b>Gibson</b> is opensource software released under <a href="/license.html">BSD license</a>, its logo was designed by <a href="https://plus.google.com/110512888654148706592" target="_blank">Mohammed Alatwi</a><br/>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.3/bootstrap.min.js"></script>  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41235708-1', 'gibson-db.in');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=541383999216397";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
